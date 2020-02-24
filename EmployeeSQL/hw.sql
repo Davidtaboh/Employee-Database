@@ -33,11 +33,14 @@ select employees.emp_no, first_name, last_name, dept_emp.dept_no
 from employees
 inner join dept_emp on employees.emp_no = dept_emp.emp_no;
 
+ALTER TABLE dept_emp
+ALTER COLUMN emp_no integer;
+
 --List all employees whose first name is "Hercules" and last names begin with "B."
 --(subquery)
 
 select * from employees where first_name like 'Hercules' and last_name like 'B%';
--
+
 --List all employees in the Sales department, 
 --including their employee number, last name, first name, and department name.
 --(inner join 3 different tables)
@@ -57,5 +60,4 @@ ORDER BY COUNT(emp_no) DESC;
 
 select * from employees where last_name like 'Baba'
 
-hello
 
