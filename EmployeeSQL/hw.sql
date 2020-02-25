@@ -5,12 +5,14 @@ select * from employees
 select * from salaries
 select * from titles
 
---List the following details of each employee: employee number, last name, first name, gender, and salary.
+drop table dept_emp
 
-select employees.emp_no, first_name, last_name, gender, salaries.salary
-from employees
-inner join salaries on employees.emp_no = salaries.emp_no;
-
+CREATE TABLE dept_emp (
+   emp_no INTEGER,
+dept_no VARCHAR, 
+from_date VARCHAR,
+to_date VARCHAR
+	);
 
 --List employees who were hired in 1986.
 
@@ -32,9 +34,7 @@ inner join salaries on employees.emp_no = salaries.emp_no;
 select employees.emp_no, first_name, last_name, dept_emp.dept_no
 from employees
 inner join dept_emp on employees.emp_no = dept_emp.emp_no;
-
-ALTER TABLE dept_emp
-ALTER COLUMN emp_no integer;
+inner join dept_emp on 
 
 --List all employees whose first name is "Hercules" and last names begin with "B."
 --(subquery)
@@ -59,5 +59,3 @@ group by last_name
 ORDER BY COUNT(emp_no) DESC;
 
 select * from employees where last_name like 'Baba'
-
-
