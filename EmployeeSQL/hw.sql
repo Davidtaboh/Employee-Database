@@ -14,6 +14,12 @@ from_date VARCHAR,
 to_date VARCHAR
 	);
 
+--List the following details of each employee: employee number, last name, first name, gender, and salary
+
+select employees.emp_no, first_name, last_name, gender, salaries.salary
+from employees
+inner join salaries on employees.emp_no = salaries.emp_no;
+
 --List employees who were hired in 1986.
 
 select * from employees where hire_date LIKE '1986%';
@@ -23,13 +29,9 @@ select * from employees where hire_date LIKE '1986%';
 --the manager's employee number, last name, first name, and start and end employment dates.
 --(Follow syntax for triple table inner join)
 
-select dept_manager.dept_no, emp_no, from_date, to_date, 
+select dept_manager.emp_no, from_date, to_date, employees.first_name, last_name, departments.department_name
 from dept_manager
-inner join 
-
-select employees.emp_no, first_name, last_name, gender, salaries.salary
-from employees
-inner join salaries on employees.emp_no = salaries.emp_no;
+inner join employees on dept_manager.emp_no = employees.emp_no
 
 --List the department of each employee with the following information: 
 --employee number, last name, first name, and department name
