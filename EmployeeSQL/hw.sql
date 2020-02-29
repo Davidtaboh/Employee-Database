@@ -28,10 +28,12 @@ select * from employees where hire_date LIKE '1986%';
 --department number, department name, 
 --the manager's employee number, last name, first name, and start and end employment dates.
 --(Follow syntax for triple table inner join)
+--(need to change emp_no datatype in dept_manager)
 
 select dept_manager.emp_no, from_date, to_date, employees.first_name, last_name, departments.department_name
 from dept_manager
 inner join employees on dept_manager.emp_no = employees.emp_no
+inner join departments on departments.dept_no = department_manager.dept_no
 
 --List the department of each employee with the following information: 
 --employee number, last name, first name, and department name
