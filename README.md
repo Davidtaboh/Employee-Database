@@ -14,10 +14,6 @@ The data points gathered and analysed include names, hiring dates, sex, salary, 
 * Download the CSVs containing the data
 * Run the scripts in Postgres
 
-### Installing
-
-One should be able to run the scripts in Postgres
-
 ### License
 
 This project is licensed under the MIT License
