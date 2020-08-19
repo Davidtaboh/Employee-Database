@@ -9,7 +9,7 @@ The data points gathered and analysed include names, hiring dates, sex, salary, 
 * Microsoft Excel
 * Postgres
 
-## Getting Started
+### Getting Started
 
 * Download the CSVs containing the data
 * Run the scripts in Postgres
@@ -18,6 +18,6 @@ The data points gathered and analysed include names, hiring dates, sex, salary, 
 
 One should be able to run the scripts in Postgres
 
-## License
+### License
 
 This project is licensed under the MIT License
